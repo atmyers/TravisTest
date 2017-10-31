@@ -45,8 +45,7 @@ git commit -m "Deploy to GitHub Pages: ${SHA}"
 
 openssl aes-256-cbc -K $encrypted_0e3cec233d15_key -iv $encrypted_0e3cec233d15_iv -in ../id_rsa_travis.enc -out ../id_rsa_travis -d
 chmod 600 ../id_rsa_travis
-eval `ssh-agent -s`
-ssh-add ../id_rsa_travis
+cp ../id_rsa_travis ~/.ssh/id_rsa
 
 git push $SSH_REPO $TARGET_BRANCH
-ssh-agent -k
+
