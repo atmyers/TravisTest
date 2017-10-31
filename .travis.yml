@@ -1,0 +1,6 @@
+language: generic # don't install any environment
+
+script: bash ./deploy.sh
+env:
+  global:
+  - COMMIT_AUTHOR_EMAIL: "atmyers2@gmail.com"
