@@ -43,10 +43,10 @@ git config user.email "$COMMIT_AUTHOR_EMAIL"
 git add --all
 git commit -m "Deploy to GitHub Pages: ${SHA}"
 
-openssl aes-256-cbc -K $encrypted_0a6446eb3ae3_key -iv $encrypted_0a6446eb3ae3_iv -in ../deploy_key.enc -out ../deploy_key -d
-chmod 600 ../deploy_key
+openssl aes-256-cbc -K $encrypted_0e3cec233d15_key -iv $encrypted_0e3cec233d15_iv -in ../id_rsa_travis.enc -out ../id_rsa_travis -d
+chmod 600 ../id_rsa_travis
 eval `ssh-agent -s`
-ssh-add deploy_key
+ssh-add id_rsa_travis
 
 # Now that we're all set up, we can push.
 git push $SSH_REPO $TARGET_BRANCH
