@@ -48,5 +48,5 @@ chmod 600 ../id_rsa_travis
 eval `ssh-agent -s`
 ssh-add ../id_rsa_travis
 
-# Now that we're all set up, we can push.
 git push $SSH_REPO $TARGET_BRANCH
+ssh-agent -k
