@@ -4,7 +4,7 @@ python:
   - 3.6
 
 install: 
-  - pip install sphinx sphinx_rtd_theme
+  - pip install --user sphinx sphinx_rtd_theme
 
 script: bash ./deploy.sh
 
