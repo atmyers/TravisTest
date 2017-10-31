@@ -4,6 +4,7 @@ script: bash ./deploy.sh
 
 env:
   global:
+  - ENCRYPTION_LABEL: "0a6446eb3ae3"
   - COMMIT_AUTHOR_EMAIL: "atmyers2@gmail.com"
 
 addons:
