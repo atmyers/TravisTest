@@ -9,4 +9,5 @@ mv html/* out/doxygen/
 cd Docs
 make html
 mv build/html/* ../out/
+touch ../out/.nojekyll
 cd ..
