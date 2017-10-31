@@ -1,6 +1,12 @@
-language: generic # don't install any environment
+language: generic
 
 script: bash ./deploy.sh
+
 env:
   global:
   - COMMIT_AUTHOR_EMAIL: "atmyers2@gmail.com"
+
+addons:
+  apt:
+    packages:
+      - doxygen
