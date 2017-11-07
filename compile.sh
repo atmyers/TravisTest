@@ -11,3 +11,6 @@ make html
 mv build/html/* ../out/
 touch ../out/.nojekyll
 cd ..
+
+# now build the code itself
+make
