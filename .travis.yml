@@ -17,4 +17,4 @@ addons:
   apt:
     packages:
       - doxygen
-      - mpich2
+      - openmpi-devel
