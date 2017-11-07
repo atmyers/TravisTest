@@ -5,6 +5,7 @@ python:
 
 install: 
   - pip install --user sphinx sphinx_rtd_theme
+  - sudo apt-get install libcr-dev mpich2 mpich2-doc
 
 script: bash ./deploy.sh
 
@@ -17,4 +18,3 @@ addons:
   apt:
     packages:
       - doxygen
-      - openmpi-devel
